@@ -1,6 +1,6 @@
 # MiniTR-GPT
 
-Bu proje, decoder-only Transformer mimarisinin iç yapısını öğrenmek için hazırlandı. Amaç büyük bir dil modeli üretmek değil; GPT'nin temel parçalarını hazır Transformer sınıfları kullanmadan kurmak ve eğitim sürecini uçtan uca görebilmek.
+Bu projeyi, decoder-only Transformer mimarisinin iç yapısını öğrenmek için hazırladım. Amaç büyük bir dil modeli üretmek değil; GPT'nin temel parçalarını hazır Transformer sınıfları kullanmadan kurmak ve eğitim sürecini uçtan uca görebilmek.
 
 Projede `torch.nn.MultiheadAttention`, `torch.nn.Transformer` veya önceden eğitilmiş GPT ağırlıkları kullanılmıyor. Q, K ve V projeksiyonları, causal mask, attention hesabı, Transformer bloğu, eğitim döngüsü ve metin üretimi proje içinde yazıldı.
 
@@ -85,7 +85,7 @@ python -m pip install -r requirements.txt
 
 `pip` komutu tek başına bulunamazsa daima `python -m pip` kullanılabilir.
 
-## Sağ tıklayıp çalıştırma
+## çalıştırma
 
 PyCharm içinde `demo.py` dosyasına sağ tıklayıp **Run 'demo'** seçilebilir. Bu dosya önce küçük eğitim çalıştırır, ardından oluşan checkpoint ile metin üretir.
 
@@ -140,19 +140,6 @@ python generate.py `
 
 Temperature yükseldikçe çıktı çeşitlenir fakat hata ihtimali de artar. Top-k küçüldükçe model daha sınırlı seçenek arasından seçim yapar.
 
-## Türkçe Wikipedia verisi hazırlama
-
-Küçük demo bittikten sonra daha büyük bir Türkçe korpus hazırlanabilir:
-
-```powershell
-python prepare_wikipedia.py `
-  --output data/turkish_wikipedia.txt `
-  --manifest data/wikipedia_manifest.jsonl `
-  --target-mb 10 `
-  --user-agent "MiniTRGPT/1.1 (Oğuzhan Bekmezci; personal learning project)"
-```
-
-Wikipedia içeriğinin lisansı proje kodunun MIT lisansından ayrıdır. Ayrıntılar `DATA_LICENSE.md` dosyasında bulunuyor. Büyük veri dosyaları Git deposuna eklenmiyor.
 
 ## Daha büyük eğitim örneği
 
@@ -218,17 +205,4 @@ Testlerde tokenizer dönüşümü, model boyutları, loss, causal mask ve üreti
 - Attention haritasını görsel olarak çizme
 - Eğitim sonuçlarını karşılaştıran deney tablosu
 
-## Kaynaklar
 
-Mimariyi çalışırken başvurulan temel kaynaklar:
-
-- Andrej Karpathy, *Let's build GPT: from scratch, in code, spelled out*
-- Andrej Karpathy, `nanoGPT` deposu
-- Vaswani ve arkadaşları, *Attention Is All You Need*
-- PyTorch resmi dokümantasyonu
-
-Kodun ana amacı hazır modeli çağırmak değil, bu kaynaklardaki temel işlemleri proje içindeki sınıflarda açık biçimde uygulamaktır.
-
-## Sınırlamalar
-
-Bu küçük bir eğitim modelidir. Ürettiği metinler bilgi kaynağı olarak kullanılmamalıdır. Özellikle demo korpusu yalnızca kodun çalışmasını kontrol etmek içindir.

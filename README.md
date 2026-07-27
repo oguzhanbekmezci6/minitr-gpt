@@ -60,6 +60,29 @@ Loss değerinin düşmesi modelin Türkçe karakter geçişlerini, boşlukları 
 
 Kullanılan veri ve eğitim süresi küçük olduğu için model henüz anlamlı ve tutarlı Türkçe metin üretmiyor. Bu sürümün amacı yüksek kaliteli bir dil modeli oluşturmak değil, Transformer mimarisini uçtan uca çalıştırmaktı.
 
+## Project Structure
+
+```text
+MiniTR-GPT/
+├── data/
+│   └── sample_turkish.txt
+├── tests/
+├── config.py
+├── data_utils.py
+├── demo.py
+├── generate.py
+├── inspect_attention.py
+├── model.py
+├── prepare_wikipedia.py
+├── tokenizer.py
+├── train.py
+├── requirements.txt
+├── pyproject.toml
+└── README.md
+
+
+
+
 Kurulum
 
 python -m venv venv

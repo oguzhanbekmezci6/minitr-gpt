@@ -1,8 +1,6 @@
 # MiniTR-GPT
 
-<p align="center">
-  <img src="assets/minitr-gpt-cover.png" alt="MiniTR-GPT architecture" width="1000">
-</p>
+
 
 <p align="center">
   <strong>A compact Turkish GPT-style language model built from scratch with PyTorch</strong>

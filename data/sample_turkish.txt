@@ -1,0 +1,134 @@
+Bilim, doğayı ve olayları sistemli biçimde anlamaya çalışır.
+İstatistik, veriyi toplama, düzenleme, analiz etme ve yorumlama sürecidir.
+Bir araştırma sorusu açık, ölçülebilir ve sınanabilir olmalıdır.
+Veri analizi ham gözlemleri karar vermede kullanılabilecek bilgiye dönüştürür.
+Olasılık, belirsizlik altında gerçekleşebilecek olayları matematiksel olarak inceler.
+Bir örneklem, daha büyük bir ana kütle hakkında bilgi edinmek için kullanılır.
+Ortalama merkezi eğilimi, standart sapma ise değişkenliği özetler.
+Medyan, uç değerlerin bulunduğu veri setlerinde ortalamadan daha dayanıklı olabilir.
+Varyans, gözlemlerin ortalama çevresindeki yayılımını kareli uzaklıklarla ölçer.
+Korelasyon iki değişkenin birlikte hareketini gösterir, tek başına nedensellik kanıtlamaz.
+Regresyon analizi, değişkenler arasındaki ilişkinin yönünü ve büyüklüğünü inceler.
+Bir katsayının işareti ilişkinin yönü hakkında bilgi verir.
+Güven aralığı, bilinmeyen parametre için makul değerler kümesi sunar.
+Hipotez testinde p değeri, sıfır hipotezi doğru kabul edildiğinde gözlenen sonucun ne kadar sıra dışı olduğunu ölçer.
+Anlamlılık düzeyi analiz başlamadan önce belirlenmelidir.
+Birinci tip hata doğru bir sıfır hipotezinin reddedilmesidir.
+İkinci tip hata yanlış bir sıfır hipotezinin reddedilememesidir.
+Test gücü, yanlış bir sıfır hipotezini doğru biçimde reddetme olasılığıdır.
+Zaman serileri, gözlemlerin zaman sırasına göre oluştuğu veri yapılarını ele alır.
+Trend, serinin uzun dönemli yönünü gösterir.
+Mevsimsellik, belirli aralıklarla tekrar eden düzenli değişimleri ifade eder.
+Durağan bir serinin ortalaması ve varyansı zaman içinde kararlı davranır.
+Fark alma işlemi bazı serilerde trend etkisini azaltabilir.
+ARIMA modeli geçmiş gözlemler ve geçmiş hatalar üzerinden tahmin üretir.
+Model seçerken yalnızca eğitim uyumuna değil, örneklem dışı başarıya da bakılmalıdır.
+Makine öğrenmesi, verilerden örüntü öğrenen hesaplama yöntemlerini kapsar.
+Sınıflandırma problemlerinde hedef değişken kategorik değerlerden oluşur.
+Regresyon problemlerinde hedef değişken çoğunlukla sayısaldır.
+Eğitim verisi model parametrelerini öğrenmek için kullanılır.
+Doğrulama verisi model seçimi ve hiperparametre ayarı için kullanılır.
+Test verisi nihai performansı tarafsız biçimde ölçmek için ayrılır.
+Bir model eğitim verisinde iyi, yeni veride kötü sonuç veriyorsa aşırı öğrenme oluşmuş olabilir.
+Eksik öğrenme, modelin verideki temel örüntüyü bile yakalayamaması durumudur.
+Kayıp fonksiyonu tahminlerin gerçek değerlerden ne kadar uzak olduğunu ölçer.
+Optimizasyon algoritması kaybı azaltacak parametre güncellemelerini belirler.
+Gradyan inişi parametreleri türev bilgisinin ters yönünde günceller.
+Öğrenme oranı çok büyükse eğitim kararsız, çok küçükse yavaş olabilir.
+Mini batch kullanımı hesaplama maliyeti ile gradyan kararlılığı arasında denge kurar.
+AdamW, uyarlanabilir öğrenme oranlarını ağırlık azalmasıyla birleştirir.
+Gradient clipping, çok büyük gradyanların eğitimi bozmasını engellemeye yardımcı olur.
+Rastgelelik tohumu deneylerin yeniden üretilebilir olmasını kolaylaştırır.
+Yapay sinir ağları doğrusal dönüşümler ve doğrusal olmayan aktivasyonlardan oluşur.
+Bir nöron girdilerin ağırlıklı toplamını hesaplar ve aktivasyon fonksiyonuna gönderir.
+Derin ağlarda her katman önceki katmanın ürettiği temsili işler.
+Embedding katmanı ayrık tokenları öğrenilebilir yoğun vektörlere dönüştürür.
+Token kimliği bir büyüklük değil, embedding tablosundaki satır numarasıdır.
+Embedding vektöründeki tek bir sayı çoğu zaman tek bir anlamlı özelliğe karşılık gelmez.
+Öğrenilen bilgi vektörün birçok boyutuna dağılabilir.
+Benzer bağlamlarda kullanılan tokenların temsilleri bazı yönlerden birbirine yaklaşabilir.
+Pozisyon embeddingi modelin token sırasını ayırt etmesine yardım eder.
+Aynı token farklı konumlarda farklı pozisyon bilgisiyle işlenir.
+Transformer mimarisi attention ve feed-forward katmanlarını tekrar eden bloklar hâlinde kullanır.
+Decoder-only model geçmiş tokenlara bakarak sıradaki tokenı tahmin eder.
+Causal mask gelecekteki tokenların attention hesabına katılmasını engeller.
+Bu maske olmazsa model eğitim sırasında doğru cevabı görerek kopya çekebilir.
+Query aranan bilgiyi, key eşleştirilecek bilgiyi, value ise taşınacak içeriği temsil eder.
+Query ve key çarpımı tokenlar arasındaki ilişki için bir skor üretir.
+Skorlar head boyutunun kareköküne bölünerek sayısal kararlılık artırılır.
+Softmax ham skorları toplamı bir olan attention ağırlıklarına dönüştürür.
+Attention çıktısı value vektörlerinin ağırlıklı toplamıdır.
+Multi-head attention farklı ilişki türlerini paralel biçimde inceleyebilir.
+Her attention head embedding uzayının daha küçük bir bölümünde çalışır.
+Head çıktıları birleştirilip yeniden doğrusal dönüşümden geçirilir.
+Residual bağlantı eski bilgiye yeni katman çıktısını ekler.
+Layer normalization aktivasyonların ölçeğini dengeler.
+Feed-forward ağ her token konumunu aynı küçük sinir ağıyla işler.
+GELU, Transformer modellerinde sık kullanılan doğrusal olmayan aktivasyonlardan biridir.
+Dropout eğitim sırasında bazı aktivasyonları rastgele kapatarak aşırı öğrenmeyi azaltabilir.
+Dil modeli her konum için sözlük büyüklüğünde logit üretir.
+Logit, olasılığa dönüştürülmeden önceki ham model puanıdır.
+Softmax logitleri karakter olasılıklarına dönüştürür.
+Cross-entropy doğru karaktere düşük olasılık verildiğinde büyür.
+Modelin amacı ortalama cross-entropy kaybını azaltmaktır.
+Loss değerinin düşmesi modelin doğru karakterlere daha fazla olasılık vermeye başladığını gösterir.
+Train loss ile validation loss birlikte izlenmelidir.
+Validation loss yükselirken train loss düşmeye devam ediyorsa model ezberlemeye başlamış olabilir.
+Perplexity, cross-entropy kaybının üstel dönüşümü olarak yorumlanabilir.
+Karakter seviyeli tokenizer küçük ve anlaşılır bir sözlük oluşturur.
+Karakter tabanlı model bilinmeyen kelime sorunu yaşamaz ancak uzun dizilerle çalışır.
+BPE tokenizer sık görülen karakter parçalarını tek token hâline getirebilir.
+Autoregressive üretimde model her adımda bir token üretir.
+Yeni üretilen token sonraki tahminde bağlamın parçası olur.
+Temperature olasılık dağılımının ne kadar keskin olacağını değiştirir.
+Düşük temperature daha güvenli fakat daha tekrarlı sonuçlar üretebilir.
+Yüksek temperature çeşitliliği artırırken anlamsız seçim riskini de yükseltir.
+Top-k örnekleme yalnızca en yüksek puanlı belirli sayıda tokenı açık bırakır.
+Greedy seçim her adımda en yüksek olasılıklı tokenı seçer.
+Örnekleme aynı başlangıç metninden farklı çıktılar üretebilir.
+Checkpoint model ve optimizer durumunu diske kaydeder.
+En iyi checkpoint en düşük validation loss görüldüğünde güncellenir.
+Son checkpoint beklenmeyen bir kesintiden sonra eğitime devam etmeyi sağlar.
+Bir deneyde kullanılan hiperparametrelerin kaydedilmesi sonuçları karşılaştırmayı kolaylaştırır.
+Batch size, block size, katman sayısı ve embedding boyutu bellek kullanımını etkiler.
+Model büyüdükçe parametre sayısı ve hesaplama maliyeti artar.
+Daha büyük model her zaman daha iyi sonuç vermez; veri miktarı da yeterli olmalıdır.
+Küçük veri üzerinde büyük model kolayca ezber yapabilir.
+Temiz veri, yalnızca daha fazla veriden çoğu zaman daha değerlidir.
+Tekrarlı paragraflar modelin aynı kalıpları gereğinden fazla öğrenmesine yol açabilir.
+Türkçe karakterlerin kodlama biçimi veri hazırlama aşamasında korunmalıdır.
+Unicode normalizasyonu aynı görünen karakterlerin tutarlı saklanmasına yardımcı olur.
+Veri dosyasının eğitim ve doğrulama bölümleri sırayı koruyarak ayrılabilir.
+Rastgele parça seçimi modelin korpusun farklı noktalarını görmesini sağlar.
+Bir eğitim adımında girdi dizisi ve bir karakter kaydırılmış hedef dizisi kullanılır.
+Örneğin girdi olarak bilim verildiğinde hedef dizisi ilim biçiminde başlar.
+Model aynı anda dizideki bütün konumlar için sonraki karakter tahmini yapar.
+Causal mask sayesinde paralel eğitim yapılırken gelecek bilgisi sızmaz.
+Eğitim ile üretim arasında bağlam kullanımı bakımından fark vardır.
+Eğitim sırasında gerçek geçmiş tokenlar, üretimde ise modelin kendi ürettiği tokenlar kullanılır.
+Bu fark uzun üretimlerde hataların birikmesine neden olabilir.
+Attention ağırlıkları modelin kararını tamamen açıklamaz ancak davranışı incelemek için ipucu verir.
+Bir attention head her zaman insanın kolayca adlandırabileceği bir görev öğrenmeyebilir.
+Model içindeki özellikler genellikle dağıtık ve çok katmanlıdır.
+Tek bir embedding boyutuna kesin anlam yüklemek çoğu zaman doğru değildir.
+Bir özelliğin doğrusal olarak ayrıştırılabilir olması, tek bir nöronda saklandığı anlamına gelmez.
+Model yorumlama çalışmaları aktivasyonlar, gradyanlar ve attention desenlerini birlikte inceleyebilir.
+Kod testi, mimarinin matematiksel olarak doğru olduğunu tek başına kanıtlamaz ama yaygın hataları yakalar.
+Causal mask testi gelecekteki konumlara sıfır attention verildiğini kontrol eder.
+Tokenizer testi metnin sayılara çevrilip geri döndürülebildiğini doğrular.
+Boyut testi logits tensörünün beklenen şekle sahip olup olmadığını kontrol eder.
+Üretim testi istenen sayıda yeni token eklendiğini doğrular.
+İyi bir proje yalnızca çalışan kod değil, neden çalıştığını açıklayabilen notlar da içermelidir.
+Deney sonuçlarını dürüst biçimde kaydetmek başarısız denemeleri de değerli hâle getirir.
+Bir hata mesajını okumak çoğu zaman sorunun hangi aşamada çıktığını doğrudan gösterir.
+Python yorumlayıcısı seçilmeden PyCharm bir dosyayı çalıştıramaz.
+Sanal ortam proje bağımlılıklarını diğer Python projelerinden ayırır.
+Paket kurarken python eksi m pip komutu seçili yorumlayıcıyı kullanmayı garanti eder.
+CPU üzerinde küçük demo hızlı çalışabilir, büyük eğitim ise saatler sürebilir.
+GPU matris işlemlerini paralel yürüterek eğitimi önemli ölçüde hızlandırabilir.
+Model eğitimi bittikten sonra örnek çıktılar tek başına yeterli değerlendirme değildir.
+Farklı başlangıç metinleri ve örnekleme ayarlarıyla sonuçlar karşılaştırılmalıdır.
+Aynı model farklı temperature değerlerinde farklı bir yazım karakteri gösterebilir.
+Modelin ürettiği doğru görünen bilgi gerçekte yanlış olabilir.
+Küçük bir dil modeli bilgi tabanı değil, olasılıksal metin tamamlayıcıdır.
+Bu demo mimariyi anlamak için hazırlanmıştır ve gerçek kullanım sistemi değildir.

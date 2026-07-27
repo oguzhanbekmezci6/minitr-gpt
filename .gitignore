@@ -1,0 +1,12 @@
+﻿venv/
+.idea/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+checkpoints/
+*.pt
+*.pth
+*.tmp
+.DS_Store
+Thumbs.db
+sonuc.txt

@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mini-tr-gpt"
+version = "1.1.0"
+description = "Karakter seviyeli Türkçe decoder-only Transformer deneyi"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Oğuzhan Bekmezci"}]
+dependencies = [
+    "numpy>=1.26,<3.0",
+    "torch>=2.2,<3.0",
+    "requests>=2.31,<3.0",
+    "tqdm>=4.66,<5.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0,<10.0"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+addopts = "-ra"

@@ -72,60 +72,7 @@ MiniTR-GPT/
 └── README.md
 ```
 
-## PyCharm ile kurulum
 
-1. Klasörü PyCharm ile aç.
-2. `File > Settings > Project > Python Interpreter` yoluna gir.
-3. Proje klasöründe `venv` veya `.venv` adında yeni bir Virtualenv oluştur.
-4. PyCharm terminalinde aşağıdaki komutu çalıştır:
-
-```powershell
-python -m pip install -r requirements.txt
-```
-
-`pip` komutu tek başına bulunamazsa daima `python -m pip` kullanılabilir.
-
-## çalıştırma
-
-PyCharm içinde `demo.py` dosyasına sağ tıklayıp **Run 'demo'** seçilebilir. Bu dosya önce küçük eğitim çalıştırır, ardından oluşan checkpoint ile metin üretir.
-
-Terminalden aynı işlem:
-
-```powershell
-python demo.py
-```
-
-Windows için eski yöntem de duruyor:
-
-```powershell
-.\run_demo.bat
-```
-
-Demo verisi küçük olduğu için ilk çıktılar anlamsız olabilir. Bu, modelin çalışmadığı anlamına gelmez. Burada bakılması gereken ilk şey train ve validation loss değerlerinin zamanla düşmesidir.
-
-## Eğitimi elle başlatma
-
-```powershell
-python train.py `
-  --data data/sample_turkish.txt `
-  --out-dir checkpoints/demo `
-  --max-iters 300 `
-  --eval-interval 50 `
-  --eval-iters 10 `
-  --batch-size 16 `
-  --block-size 64 `
-  --n-layer 2 `
-  --n-head 2 `
-  --n-embd 64
-```
-
-Eğitim sonunda şu dosyalar oluşur:
-
-- `best.pt`: en düşük validation loss değerine sahip checkpoint
-- `last.pt`: son adımdaki checkpoint
-- `tokenizer.json`: karakter sözlüğü
-- `training_config.json`: kullanılan ayarlar
-- `metrics.jsonl`: loss kayıtları
 
 ## Metin üretme
 
@@ -138,27 +85,10 @@ python generate.py `
   --top-k 20
 ```
 
-Temperature yükseldikçe çıktı çeşitlenir fakat hata ihtimali de artar. Top-k küçüldükçe model daha sınırlı seçenek arasından seçim yapar.
+Temperature yükseldikçe çıktı çeşitleniyor fakat hata ihtimali de artıyor. Top-k küçüldükçe model daha sınırlı seçenek arasından seçim yapar.
 
 
-## Daha büyük eğitim örneği
 
-```powershell
-python train.py `
-  --data data/turkish_wikipedia.txt `
-  --out-dir checkpoints/wiki-small `
-  --max-iters 3000 `
-  --eval-interval 200 `
-  --eval-iters 50 `
-  --batch-size 32 `
-  --block-size 128 `
-  --n-layer 4 `
-  --n-head 4 `
-  --n-embd 128 `
-  --learning-rate 3e-4
-```
-
-CPU üzerinde bu eğitim uzun sürebilir. GPU varsa `--device cuda` kullanılabilir.
 
 ## Eğitime devam etme
 
